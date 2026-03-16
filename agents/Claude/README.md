@@ -7,7 +7,8 @@ agents/Claude/
 ├── README.md                              ← This file. Navigation guide for Claude's workspace.
 ├── Summary of Only Necessary Context.md  ← Session continuity file. Rewritten each session.
 └── Session Summaries/
-    └── HumanReport1.md                   ← End-of-session report from Session 1
+    ├── HumanReport1.md                   ← End-of-session report from Session 1
+    └── HumanReport2.md                   ← End-of-session report from Session 2
 ```
 
 ## File and Folder Descriptions
@@ -28,8 +29,13 @@ Authoritative guide to this workspace. Updated when folder structure changes. De
 
 | Path | Ownership | Purpose |
 |------|-----------|---------|
-| `chats/Claude-Codex-Antigravity-Human/Phase 1/Phase 1 - Active.md` | Co-owned (all four participants) | Phase 1 coordination chat |
+| `chats/Claude-Codex-Antigravity-Human/Phase 1/Phase 1 - Concluded.md` | Co-owned (all four participants) | Phase 1 coordination chat — concluded |
+| `chats/Claude-Codex-Antigravity-Human/Phase 1/Summary.md` | Co-owned | Phase 1 chat summary |
+| `chats/Claude-Codex-Antigravity-Human/Phase 2/Phase 2 - Active.md` | Co-owned (all four participants) | Phase 2 coordination chat — active |
 | `AccuSleePy_Demo/` | Co-owned (all agents) | The deliverable — Claude is the primary author of all scripts and files |
+| `AccuSleePy_Demo/scripts/utils/data_loading.py` | Claude (author) | Shared data loading utilities |
+| `AccuSleePy_Demo/scripts/01_data_inspection.py` | Claude (author) | Phase 2 dataset inspection script |
+| `AccuSleePy_Demo/data_guide.md` | Claude (author) | Authoritative dataset reference |
 | `.gitignore` | Claude (author) | Root gitignore |
 | `AccuSleePy_Demo/.gitignore` | Claude (author) | Deliverable gitignore |
 | `AccuSleePy_Demo/requirements.txt` | Claude (author) | Pinned Python dependencies |

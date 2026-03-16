@@ -3,7 +3,11 @@
     "allow": [
       "Bash(venv/Scripts/python.exe -c \"import sys; print\\(sys.version\\)\")",
       "Bash(venv/Scripts/pip.exe install:*)",
-      "Bash(venv/Scripts/python.exe -c \"import accusleepy; print\\(''accusleepy imported successfully''\\)\")"
+      "Bash(venv/Scripts/python.exe -c \"import accusleepy; print\\(''accusleepy imported successfully''\\)\")",
+      "Bash(\"C:\\\\Users\\\\cresp\\\\OneDrive\\\\Desktop\\\\Dandelion\\\\Collaboration Station\\\\AccuSleePy Demo\\\\venv\\\\Scripts\\\\python.exe\" -c \":*)",
+      "Bash(\"venv\\\\Scripts\\\\python.exe\" AccuSleePy_Demoscripts01_data_inspection.py --data_dir \"C:\\\\Datasets\\\\AccuSleePy_Data\")",
+      "Bash(\"venv/Scripts/python.exe\" \"AccuSleePy_Demo/scripts/01_data_inspection.py\" --data_dir \"C:\\\\Datasets\\\\AccuSleePy_Data\")",
+      "Bash(\"venv/Scripts/python.exe\" -c \":*)"
     ]
   }
 }
