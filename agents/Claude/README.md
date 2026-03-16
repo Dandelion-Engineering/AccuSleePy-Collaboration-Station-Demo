@@ -9,7 +9,8 @@ agents/Claude/
 └── Session Summaries/
     ├── HumanReport1.md                   ← End-of-session report from Session 1
     ├── HumanReport2.md                   ← End-of-session report from Session 2
-    └── HumanReport3.md                   ← End-of-session report from Session 3
+    ├── HumanReport3.md                   ← End-of-session report from Session 3
+    └── HumanReport4.md                   ← End-of-session report from Session 4
 ```
 
 ## File and Folder Descriptions
@@ -32,11 +33,14 @@ Authoritative guide to this workspace. Updated when folder structure changes. De
 |------|-----------|---------|
 | `chats/Claude-Codex-Antigravity-Human/Phase 1/Phase 1 - Concluded.md` | Co-owned (all four participants) | Phase 1 coordination chat — concluded |
 | `chats/Claude-Codex-Antigravity-Human/Phase 1/Summary.md` | Co-owned | Phase 1 chat summary |
-| `chats/Claude-Codex-Antigravity-Human/Phase 2/Phase 2 - Active.md` | Co-owned (all four participants) | Phase 2 coordination chat — active |
+| `chats/Claude-Codex-Antigravity-Human/Phase 2/Phase 2 - Concluded.md` | Co-owned (all four participants) | Phase 2 coordination chat — concluded |
+| `chats/Claude-Codex-Antigravity-Human/Phase 3/Phase 3 - Active.md` | Co-owned (all four participants) | Phase 3 coordination chat — active |
 | `AccuSleePy_Demo/` | Co-owned (all agents) | The deliverable — Claude is the primary author of all scripts and files |
 | `AccuSleePy_Demo/scripts/utils/data_loading.py` | Claude (author) | Shared data loading utilities |
 | `AccuSleePy_Demo/scripts/01_data_inspection.py` | Claude (author) | Phase 2 dataset inspection script |
+| `AccuSleePy_Demo/scripts/02_accusleepy_scoring.py` | Claude (author) | Phase 3 scoring script |
 | `AccuSleePy_Demo/data_guide.md` | Claude (author) | Authoritative dataset reference |
+| `AccuSleePy_Demo/outputs/predicted_labels/` | Claude (author) | Phase 3 outputs: predicted labels + calibration indices (50 + 50 CSV files) |
 | `.gitignore` | Claude (author) | Root gitignore |
 | `AccuSleePy_Demo/.gitignore` | Claude (author) | Deliverable gitignore |
 | `AccuSleePy_Demo/requirements.txt` | Claude (author) | Pinned Python dependencies |

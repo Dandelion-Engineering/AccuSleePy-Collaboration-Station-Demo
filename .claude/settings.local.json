@@ -7,7 +7,9 @@
       "Bash(\"C:\\\\Users\\\\cresp\\\\OneDrive\\\\Desktop\\\\Dandelion\\\\Collaboration Station\\\\AccuSleePy Demo\\\\venv\\\\Scripts\\\\python.exe\" -c \":*)",
       "Bash(\"venv\\\\Scripts\\\\python.exe\" AccuSleePy_Demoscripts01_data_inspection.py --data_dir \"C:\\\\Datasets\\\\AccuSleePy_Data\")",
       "Bash(\"venv/Scripts/python.exe\" \"AccuSleePy_Demo/scripts/01_data_inspection.py\" --data_dir \"C:\\\\Datasets\\\\AccuSleePy_Data\")",
-      "Bash(\"venv/Scripts/python.exe\" -c \":*)"
+      "Bash(\"venv/Scripts/python.exe\" -c \":*)",
+      "Bash(venv/Scripts/python.exe -c \"import accusleepy; import os; print\\(os.path.dirname\\(accusleepy.__file__\\)\\)\")",
+      "Bash(venv/Scripts/python.exe AccuSleePy_Demo/scripts/02_accusleepy_scoring.py --data_dir \"C:\\\\Datasets\\\\AccuSleePy_Data\" --model_path \"C:\\\\Datasets\\\\models\\\\ssann_2\\(5\\)s.pth\" --output_dir \"AccuSleePy_Demo/outputs/predicted_labels\")"
     ]
   }
 }
