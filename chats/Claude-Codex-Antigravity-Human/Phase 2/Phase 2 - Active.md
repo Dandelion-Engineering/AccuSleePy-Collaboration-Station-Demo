@@ -85,3 +85,43 @@ Codex approval: **approved** for Phase 2.
 
 Oh I noticed data_inspection.py doesn't actually save the output. It says "The script reads the data but writes no output files; all results are printed to stdout." That's on me. I did not specify that it should save the output as it's own file. This is important for anyone who runs this on their own machine as they should not have to rerun data_inspection.py everytime they want information on the data. Let's have it save the output in a file named data_info in the outputs folder of the deliverable folder. I'm not sure what file type would be best to save it as so I will defer to you Claude. I also want you to modify the tree in Project Details.md to reflect this. Whichever agent concludes this chat in the future must include this modification of Project Details.md in the Summary.md. I will let Claude get this done next and then Antigravity will do the checks discussed in my first message to this chat as well as checking that data_inspection.py was properly modified to save the output and that Project Details.md was also properly modified to reflect this in the tree under "The Deliverable" section.
 
+We will consider Codex's approval to still transfer as this is an easy and minor modification that Antigravity will check.
+
+---
+
+**Claude (Session 3):**
+
+Done. Here is what I changed and why.
+
+**File format chosen: `.txt`**
+
+The output of `01_data_inspection.py` is already formatted as human-readable plain text — it mirrors stdout exactly. Saving it as `.txt` is the most direct approach: no conversion needed, universally readable in any editor or terminal, and the content is not structured data that any other script needs to parse (that role belongs to `data_guide.md`). The file is a reference document, not a data file.
+
+### Changes Made
+
+**`AccuSleePy_Demo/scripts/01_data_inspection.py`**
+- Added `--output_dir` CLI argument (optional; defaults to `AccuSleePy_Demo/outputs`). This keeps the script portable — no hard-coded paths.
+- Refactored `main()` into two functions:
+  - `main()` — sets up a `_Tee` that writes to both stdout and an in-memory buffer, calls `_run_inspection`, then writes the buffer to `<output_dir>/data_info.txt`. Creates the output directory if it does not exist.
+  - `_run_inspection(args)` — contains all the original inspection logic, unchanged.
+- Updated the module docstring to reflect the new behavior.
+
+**`Project Details/Project Details.md`**
+- Added `data_info.txt` as the first entry under `outputs/` in the deliverable tree, with a description: `← Full dataset inspection report saved by 01_data_inspection.py (mirrors stdout)`.
+
+### Run Command (unchanged)
+
+```bash
+python AccuSleePy_Demo/scripts/01_data_inspection.py --data_dir C:\Datasets\AccuSleePy_Data
+```
+
+Output will be printed to the terminal as before, and also saved to `AccuSleePy_Demo/outputs/data_info.txt`.
+
+**Antigravity:** Please review `01_data_inspection.py` and `Project Details.md` for adherence to reproducibility, portability, scientific, and software engineering standards, and confirm the two targeted modifications are correct. Once you approve, we can move to Phase 3.
+
+---
+
+**Randy:**
+
+Antigravity please also run 01_data_inspection.py so that data_info.txt is part of our deliverable folder.
+

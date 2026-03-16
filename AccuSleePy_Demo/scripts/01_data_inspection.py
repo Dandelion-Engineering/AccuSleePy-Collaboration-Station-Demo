@@ -4,17 +4,23 @@ Loads every recording in the dataset, verifies signal dimensions, epoch
 structure, sampling rate, and label encoding, then prints a human-readable
 summary covering all items required by the Phase 2 specification.
 
+The summary is printed to stdout AND saved to ``outputs/data_info.txt``
+inside the output directory so it can be referenced without re-running
+the script.
+
 Usage
 -----
 ::
 
     python scripts/01_data_inspection.py --data_dir C:\\Datasets\\AccuSleePy_Data
 
-The script reads the data but writes no output files; all results are
-printed to stdout.
+    # Specify a custom output directory (default: AccuSleePy_Demo/outputs):
+    python scripts/01_data_inspection.py --data_dir C:\\Datasets\\AccuSleePy_Data \\
+        --output_dir AccuSleePy_Demo/outputs
 """
 
 import argparse
+import io
 import os
 import sys
 
@@ -47,15 +53,27 @@ MIN_CALIBRATION_EPOCHS = 120
 def parse_args() -> argparse.Namespace:
     """Parse command-line arguments.
 
-    :return: parsed namespace with ``data_dir`` attribute
+    :return: parsed namespace with ``data_dir`` and ``output_dir`` attributes
     """
     parser = argparse.ArgumentParser(
-        description="Inspect the AccuSleePy dataset and print a structured summary."
+        description=(
+            "Inspect the AccuSleePy dataset and print a structured summary. "
+            "Output is also saved to <output_dir>/data_info.txt."
+        )
     )
     parser.add_argument(
         "--data_dir",
         required=True,
         help="Root directory of the AccuSleePy dataset (must contain '4-hour_recordings/').",
+    )
+    parser.add_argument(
+        "--output_dir",
+        default=os.path.join("AccuSleePy_Demo", "outputs"),
+        help=(
+            "Directory where data_info.txt will be written. "
+            "Created automatically if it does not exist. "
+            "Default: AccuSleePy_Demo/outputs"
+        ),
     )
     return parser.parse_args()
 
@@ -75,9 +93,47 @@ def format_size(path: str) -> str:
 
 
 def main() -> None:
-    """Run dataset inspection and print summary to stdout."""
+    """Run dataset inspection, print summary to stdout, and save to data_info.txt."""
     args = parse_args()
 
+    # Tee all output to both stdout and a string buffer so we can save it
+    buffer = io.StringIO()
+
+    class _Tee:
+        """Write to both a real stream and a buffer simultaneously."""
+
+        def __init__(self, real_stream, buf):
+            self._real = real_stream
+            self._buf = buf
+
+        def write(self, text):
+            self._real.write(text)
+            self._buf.write(text)
+
+        def flush(self):
+            self._real.flush()
+            self._buf.flush()
+
+    sys.stdout = _Tee(sys.__stdout__, buffer)
+
+    try:
+        _run_inspection(args)
+    finally:
+        sys.stdout = sys.__stdout__
+
+    # Save captured output to data_info.txt
+    os.makedirs(args.output_dir, exist_ok=True)
+    output_path = os.path.join(args.output_dir, "data_info.txt")
+    with open(output_path, "w", encoding="utf-8") as fh:
+        fh.write(buffer.getvalue())
+    print(f"\nOutput saved to: {output_path}")
+
+
+def _run_inspection(args: argparse.Namespace) -> None:
+    """Execute all dataset inspection steps and print results.
+
+    :param args: parsed CLI arguments (``data_dir``, ``output_dir``)
+    """
     print("=" * 70)
     print("AccuSleePy Dataset Inspection")
     print("=" * 70)

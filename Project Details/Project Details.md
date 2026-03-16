@@ -84,6 +84,7 @@ AccuSleePy_Demo/
 │   ├── 05_sleep_metrics.py            ← Descriptive analysis: stage %, bouts, transitions
 │   └── 06_figures.py                  ← Generate all publication-quality figures
 ├── outputs/
+│   ├── data_info.txt                  ← Full dataset inspection report saved by 01_data_inspection.py (mirrors stdout)
 │   ├── predicted_labels/              ← One output file per recording (AccuSleePy native: predicted label + confidence score) + one companion calibration indices file per recording
 │   ├── sleep_metrics.csv              ← Per-recording stage %, bout stats, transition rates, low-confidence epoch counts
 │   └── validation_summary.csv         ← Per-recording kappa, accuracy, per-class F1
