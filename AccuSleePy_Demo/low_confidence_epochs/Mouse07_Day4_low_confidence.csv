@@ -1,0 +1,5 @@
+epoch_index,predicted_label,confidence_score
+4853,2,0.7648093
+4854,3,0.7311119
+5070,3,0.7033124
+5071,1,0.7950993
