@@ -1,0 +1,191 @@
+======================================================================
+AccuSleePy Dataset Inspection
+======================================================================
+Data directory : C:\Datasets\AccuSleePy_Data
+
+Total recordings found: 50
+
+----------------------------------------------------------------------
+FILE INVENTORY
+----------------------------------------------------------------------
+Recording ID             recording.parquet    labels.csv
+----------------------  ------------------  ------------
+Mouse01_Day1                       64.6 MB       16.9 KB
+Mouse01_Day2                       64.8 MB       11.3 KB
+Mouse01_Day3                       64.5 MB       11.3 KB
+Mouse01_Day4                       64.6 MB       11.3 KB
+Mouse01_Day5                       64.7 MB       11.3 KB
+Mouse02_Day1                       65.9 MB       11.3 KB
+Mouse02_Day2                       65.7 MB       11.3 KB
+Mouse02_Day3                       65.8 MB       11.3 KB
+Mouse02_Day4                       66.1 MB       11.3 KB
+Mouse02_Day5                       65.8 MB       11.3 KB
+Mouse03_Day1                       64.8 MB       11.3 KB
+Mouse03_Day2                       64.9 MB       11.3 KB
+Mouse03_Day3                       64.4 MB       11.3 KB
+Mouse03_Day4                       64.8 MB       11.3 KB
+Mouse03_Day5                       64.7 MB       11.3 KB
+Mouse04_Day1                       65.9 MB       11.3 KB
+Mouse04_Day2                       65.7 MB       11.3 KB
+Mouse04_Day3                       65.5 MB       11.3 KB
+Mouse04_Day4                       65.3 MB       11.3 KB
+Mouse04_Day5                       65.7 MB       11.3 KB
+Mouse05_Day1                       65.9 MB       11.3 KB
+Mouse05_Day2                       65.6 MB       11.3 KB
+Mouse05_Day3                       65.5 MB       11.3 KB
+Mouse05_Day4                       66.5 MB       11.3 KB
+Mouse05_Day5                       66.2 MB       11.3 KB
+Mouse06_Day1                       65.3 MB       11.3 KB
+Mouse06_Day2                       65.1 MB       11.3 KB
+Mouse06_Day3                       65.4 MB       11.3 KB
+Mouse06_Day4                       65.3 MB       11.3 KB
+Mouse06_Day5                       64.9 MB       11.3 KB
+Mouse07_Day1                       65.3 MB       11.3 KB
+Mouse07_Day2                       65.3 MB       11.3 KB
+Mouse07_Day3                       65.6 MB       11.3 KB
+Mouse07_Day4                       65.4 MB       11.3 KB
+Mouse07_Day5                       66.0 MB       11.3 KB
+Mouse08_Day1                       65.7 MB       11.3 KB
+Mouse08_Day2                       65.3 MB       11.3 KB
+Mouse08_Day3                       65.1 MB       11.3 KB
+Mouse08_Day4                       65.6 MB       11.3 KB
+Mouse08_Day5                       65.5 MB       11.3 KB
+Mouse09_Day1                       65.1 MB       11.3 KB
+Mouse09_Day2                       65.8 MB       11.3 KB
+Mouse09_Day3                       65.6 MB       11.3 KB
+Mouse09_Day4                       65.3 MB       11.3 KB
+Mouse09_Day5                       65.4 MB       11.3 KB
+Mouse10_Day1                       65.7 MB       11.3 KB
+Mouse10_Day2                       65.5 MB       11.3 KB
+Mouse10_Day3                       65.1 MB       11.3 KB
+Mouse10_Day4                       65.5 MB       11.3 KB
+Mouse10_Day5                       65.3 MB       11.3 KB
+
+----------------------------------------------------------------------
+REPRESENTATIVE RECORDING: Mouse01_Day1
+----------------------------------------------------------------------
+  EEG array shape : (7372800,)   dtype: float64
+  EMG array shape : (7372800,)   dtype: float64
+  Label array shape: (5760,)   dtype: int64
+
+  Expected samples (4h @ 512 Hz): 7,372,800
+  Actual samples                                : 7,372,800
+  Sampling rate check : PASS
+
+  Expected epochs (4h / 2.5s): 5,760
+  Actual epochs                          : 5,760
+  Samples per epoch (512 Hz × 2.5s): 1280
+  Epoch structure check: PASS
+
+  Unique label values: [1, 2, 3]
+    1 = REM: 624 epochs (10.8%)
+    2 = Wake: 1919 epochs (33.3%)
+    3 = NREM: 3217 epochs (55.9%)
+
+----------------------------------------------------------------------
+FULL DATASET SCAN
+----------------------------------------------------------------------
+  [01/50] Mouse01_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [02/50] Mouse01_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [03/50] Mouse01_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [04/50] Mouse01_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [05/50] Mouse01_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [06/50] Mouse02_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [07/50] Mouse02_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [08/50] Mouse02_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [09/50] Mouse02_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [10/50] Mouse02_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [11/50] Mouse03_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [12/50] Mouse03_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [13/50] Mouse03_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [14/50] Mouse03_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [15/50] Mouse03_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [16/50] Mouse04_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [17/50] Mouse04_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [18/50] Mouse04_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [19/50] Mouse04_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [20/50] Mouse04_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [21/50] Mouse05_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [22/50] Mouse05_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [23/50] Mouse05_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [24/50] Mouse05_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [25/50] Mouse05_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [26/50] Mouse06_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [27/50] Mouse06_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [28/50] Mouse06_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [29/50] Mouse06_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [30/50] Mouse06_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [31/50] Mouse07_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [32/50] Mouse07_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [33/50] Mouse07_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [34/50] Mouse07_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [35/50] Mouse07_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [36/50] Mouse08_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [37/50] Mouse08_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [38/50] Mouse08_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [39/50] Mouse08_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [40/50] Mouse08_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [41/50] Mouse09_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [42/50] Mouse09_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [43/50] Mouse09_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [44/50] Mouse09_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [45/50] Mouse09_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [46/50] Mouse10_Day1            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [47/50] Mouse10_Day2            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [48/50] Mouse10_Day3            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [49/50] Mouse10_Day4            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+  [50/50] Mouse10_Day5            samples=7,372,800  epochs= 5,760  labels=[1, 2, 3]  OK
+
+----------------------------------------------------------------------
+LABEL DISTRIBUTION (ALL RECORDINGS COMBINED)
+----------------------------------------------------------------------
+  Total epochs across all recordings: 288,000
+
+    1 = REM  :   30,128 epochs  ( 10.46%)
+    2 = Wake :   98,983 epochs  ( 34.37%)
+    3 = NREM :  158,889 epochs  ( 55.17%)
+
+----------------------------------------------------------------------
+PER-RECORDING LABEL COUNTS — MINIMUM ACROSS ALL RECORDINGS
+----------------------------------------------------------------------
+  (Phase 3 requires at least 120 epochs per stage per recording)
+
+    1 = REM  : min=  397 (Mouse06_Day2)  max=  851  mean=  602.6  [OK]
+    2 = Wake : min=1,035 (Mouse03_Day5)  max=3,047  mean= 1979.7  [OK]
+    3 = NREM : min=2,243 (Mouse04_Day1)  max=3,880  mean= 3177.8  [OK]
+
+  Calibration feasibility (120 epochs/stage): FEASIBLE for all recordings
+
+----------------------------------------------------------------------
+ANOMALIES
+----------------------------------------------------------------------
+  None detected.
+
+----------------------------------------------------------------------
+SUMMARY
+----------------------------------------------------------------------
+  Animals (mice): 10  —  Mouse01, Mouse02, Mouse03, Mouse04, Mouse05, Mouse06, Mouse07, Mouse08, Mouse09, Mouse10
+  Total recordings: 50
+  Recordings per mouse: 5
+  Signal shape: (7,372,800,) samples  [4h × 3600s × 512 Hz]
+  Epochs per recording: 5,760  [4h × 3600s / 2.5s]
+  Label encoding confirmed: REM=1, Wake=2, NREM=3
+
+----------------------------------------------------------------------
+LOADING CODE EXAMPLE (template for all subsequent scripts)
+----------------------------------------------------------------------
+
+    from scripts.utils.data_loading import find_all_recordings, load_eeg_emg, load_expert_labels
+
+    recordings = find_all_recordings(data_dir)
+
+    for rec in recordings:
+        eeg, emg = load_eeg_emg(rec["recording_path"])
+        labels   = load_expert_labels(rec["label_path"])
+        # eeg  : shape (7372800,), dtype float64
+        # emg  : shape (7372800,), dtype float64
+        # labels: shape (5760,),   dtype int64
+    
+======================================================================
+Inspection complete.
+======================================================================

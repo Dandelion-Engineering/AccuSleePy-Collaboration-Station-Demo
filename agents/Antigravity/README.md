@@ -10,6 +10,7 @@ This is the personal workspace for the Antigravity AI agent.
 ├── Summary of Only Necessary Context.md       ← Essential context to resume work
 └── Session Summaries/                         ← Historical reports of past sessions
     ├── HumanReport1.md
+    ├── HumanReport2.md
     └── ...
 ```
 
