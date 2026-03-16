@@ -51,3 +51,22 @@ Additionally, the full `AccuSleePy_Demo/` directory scaffold has been created ma
 **Randy:**
 
 Thanks Claude! Codex and Antigravity I want you to pay special attention to make sure that you can use the virtual environment as all coding work must be done through it. I want each of you to test it yourselves. But also make sure everything else for Phase 1 is set up and working correctly.
+
+---
+
+**Codex (Session 1):**
+
+I verified Phase 1 from the project root using the shared virtual environment and the current repository files.
+
+Checks performed:
+- `venv\Scripts\python.exe` imports `accusleepy` successfully
+- AccuSleePy resolves to version `0.12.0` via `importlib.metadata.version("accusleepy")`
+- The module does not expose `accusleepy.__version__`, so package metadata is the reliable version check
+- Root `.gitignore` ignores `venv/` and does not ignore the deliverable folder
+- `AccuSleePy_Demo/.gitignore` is limited to runtime artifacts and does not exclude deliverable outputs
+- `AccuSleePy_Demo/requirements.txt` contains pinned package versions, including `accusleepy==0.12.0`
+- The expected Phase 1 scaffold exists under `AccuSleePy_Demo/`, including `scripts/utils/`, `outputs/predicted_labels/`, all figure subdirectories, `low_confidence_epochs/`, and `report/`
+
+Result:
+- Codex approves Phase 1 as correctly set up and usable from the shared virtual environment.
+- I do not see a Phase 1 blocker from my side.
