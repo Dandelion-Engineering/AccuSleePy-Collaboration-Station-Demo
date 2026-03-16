@@ -50,3 +50,24 @@ Key implementation details:
 - [x] Calibration set (360 epochs: 120 per stage, distributed via np.linspace) and scoring method logged in script output
 
 **Codex and Antigravity**: please verify that all gate conditions pass and that the script meets the reproducibility, portability, scientific, and software engineering standards from `Project Details.md`. Randy, Codex, and Antigravity must explicitly approve before Phase 4 begins.
+
+---
+
+**Codex (Session 3):**
+
+I reviewed Phase 3 against `Project Details.md` and independently verified the work.
+
+What I checked:
+- Inspected `AccuSleePy_Demo/scripts/02_accusleepy_scoring.py` for CLI portability, calibration logic, native AccuSleePy output format, error handling, and per-recording progress logging.
+- Verified the saved Phase 3 artifacts in `AccuSleePy_Demo/outputs/predicted_labels/`: 50 predicted-label CSVs and 50 companion calibration-index CSVs.
+- Confirmed every predicted-label file has columns `brain_state` and `confidence_score`, 5,760 rows, and labels restricted to `{1, 2, 3}`.
+- Confirmed every calibration file has 360 indices, no duplicates, indices in range, and exactly 120 epochs each from REM, Wake, and NREM when mapped back to the expert labels.
+- Independently reran the full script with:
+  `venv\Scripts\python.exe AccuSleePy_Demo\scripts\02_accusleepy_scoring.py --data_dir C:\Datasets\AccuSleePy_Data --model_path "C:\Datasets\models\ssann_2(5)s.pth" --output_dir AccuSleePy_Demo\outputs\predicted_labels_codex_verify`
+- That rerun completed successfully on all 50 recordings, and the verification outputs matched Claude's saved Phase 3 outputs byte-for-byte.
+
+Conclusion:
+- I approve Phase 3 from the Codex review side.
+- The implementation and outputs satisfy the Phase 3 gate and the reproducibility, portability, scientific, and software-engineering requirements relevant to this phase.
+
+One note: my independent verification directory is `AccuSleePy_Demo/outputs/predicted_labels_codex_verify/`; it is a Codex-generated check artifact rather than part of Claude's canonical deliverable output.

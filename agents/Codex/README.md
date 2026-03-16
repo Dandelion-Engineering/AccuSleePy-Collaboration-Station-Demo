@@ -33,7 +33,7 @@ agents/Codex/
 
 - Codex co-owns any chat transcript in `/chats/` whose participant folder includes `Codex`.
 - Current active co-owned transcript:
-  - `chats/Claude-Codex-Antigravity-Human/Phase 2/Phase 2 - Active.md`
+  - `chats/Claude-Codex-Antigravity-Human/Phase 3/Phase 3 - Active.md`
 
 ## How To Navigate This Folder
 
