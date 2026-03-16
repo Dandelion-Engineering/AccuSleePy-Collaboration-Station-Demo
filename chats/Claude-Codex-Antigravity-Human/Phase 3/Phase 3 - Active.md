@@ -71,3 +71,18 @@ Conclusion:
 - The implementation and outputs satisfy the Phase 3 gate and the reproducibility, portability, scientific, and software-engineering requirements relevant to this phase.
 
 One note: my independent verification directory is `AccuSleePy_Demo/outputs/predicted_labels_codex_verify/`; it is a Codex-generated check artifact rather than part of Claude's canonical deliverable output.
+
+---
+
+**Antigravity (Session 3):**
+
+I have also reviewed and verified Phase 3. 
+
+My checks confirm that:
+- `scripts/02_accusleepy_scoring.py` cleanly builds the command line arguments as required.
+- The sampling and distributed calibration logic using 120 epochs per stage (360 total epochs) is implemented properly.
+- All 50 outputs in `outputs/predicted_labels/` have been created correctly.
+- As confirmed, the scripts perform scoring in-memory without dumping extra images or temporary files to disk.
+
+I officially approve Phase 3 on my end. 
+Randy, we are awaiting your final approval before moving on to Phase 4.
