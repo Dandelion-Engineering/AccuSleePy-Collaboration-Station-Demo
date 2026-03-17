@@ -12,7 +12,8 @@ agents/Claude/
     ├── HumanReport3.md                   ← End-of-session report from Session 3
     ├── HumanReport4.md                   ← End-of-session report from Session 4
     ├── HumanReport5.md                   ← End-of-session report from Session 5
-    └── HumanReport6.md                   ← End-of-session report from Session 6
+    ├── HumanReport6.md                   ← End-of-session report from Session 6
+    └── HumanReport7.md                   ← End-of-session report from Session 7
 ```
 
 ## File and Folder Descriptions
@@ -38,7 +39,9 @@ Authoritative guide to this workspace. Updated when folder structure changes. De
 | `chats/Claude-Codex-Antigravity-Human/Phase 2/Phase 2 - Concluded.md` | Co-owned (all four participants) | Phase 2 coordination chat — concluded |
 | `chats/Claude-Codex-Antigravity-Human/Phase 3/Phase 3 - Concluded.md` | Co-owned (all four participants) | Phase 3 coordination chat — concluded |
 | `chats/Claude-Codex-Antigravity-Human/Phase 3/Summary.md` | Co-owned | Phase 3 chat summary |
-| `chats/Claude-Codex-Antigravity-Human/Phase 4/Phase 4 - Active.md` | Co-owned (all four participants) | Phase 4 coordination chat — active |
+| `chats/Claude-Codex-Antigravity-Human/Phase 4/Phase 4 - Concluded.md` | Co-owned (all four participants) | Phase 4 coordination chat — concluded |
+| `chats/Claude-Codex-Antigravity-Human/Phase 4/Summary.md` | Co-owned | Phase 4 chat summary |
+| `chats/Claude-Codex-Antigravity-Human/Phase 5/Phase 5 - Active.md` | Co-owned (all four participants) | Phase 5 coordination chat — active |
 | `AccuSleePy_Demo/` | Co-owned (all agents) | The deliverable — Claude is the primary author of all scripts and files |
 | `AccuSleePy_Demo/scripts/utils/data_loading.py` | Claude (author) | Shared data loading utilities |
 | `AccuSleePy_Demo/scripts/utils/metrics.py` | Claude (author) | Shared metric computation utilities (kappa, F1, accuracy, confusion matrix) |
@@ -49,6 +52,8 @@ Authoritative guide to this workspace. Updated when folder structure changes. De
 | `AccuSleePy_Demo/outputs/validation_summary.csv` | Codex (author) | Phase 4B per-recording validation metrics |
 | `AccuSleePy_Demo/data_guide.md` | Claude (author) | Authoritative dataset reference |
 | `AccuSleePy_Demo/outputs/predicted_labels/` | Claude (author) | Phase 3 outputs: predicted labels + calibration indices (50 + 50 CSV files) |
+| `AccuSleePy_Demo/scripts/05_sleep_metrics.py` | Claude (author) | Phase 5 sleep metrics script |
+| `AccuSleePy_Demo/outputs/sleep_metrics.csv` | Claude (author) | Phase 5 per-recording sleep architecture metrics (50 rows × 26 columns) |
 | `AccuSleePy_Demo/QC_report.md` | Claude (author) | Phase 4A QC report |
 | `AccuSleePy_Demo/low_confidence_epochs/` | Claude (author) | Phase 4A per-recording low-confidence epoch CSVs (50 files) |
 | `.gitignore` | Claude (author) | Root gitignore |
