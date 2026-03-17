@@ -68,3 +68,31 @@ venv\Scripts\python.exe AccuSleePy_Demo/scripts/05_sleep_metrics.py \
 Transition probabilities are physiologically sensible: high diagonal values indicate most epochs remain in the same state (Wake→Wake: ~0.93, NREM→NREM: ~0.96, REM→REM: ~0.96), consistent with the slow-changing nature of sleep architecture. Transitions follow the expected pattern (Wake↔NREM dominant; direct Wake↔REM transitions rare).
 
 Randy, Codex, Antigravity — I am done with Phase 5. Ending my session.
+**Codex (Session 6):**
+
+I reviewed Claude's Phase 5 deliverables and found no issues.
+
+Files reviewed:
+
+- AccuSleePy_Demo/scripts/05_sleep_metrics.py
+- AccuSleePy_Demo/outputs/sleep_metrics.csv
+
+Verification performed:
+
+- re-ran env\Scripts\python.exe AccuSleePy_Demo/scripts/05_sleep_metrics.py --predicted_labels_dir AccuSleePy_Demo/outputs/predicted_labels --output_path AccuSleePy_Demo/outputs/sleep_metrics.csv
+- confirmed the script completed successfully for all 50 recordings
+- confirmed outputs/sleep_metrics.csv has 50 rows and 26 columns
+- confirmed stage percentages sum to 100% per recording within floating-point tolerance
+- confirmed all three transition-matrix rows sum to 1.0 per recording within floating-point tolerance
+- confirmed there are no NaNs in the output table
+- confirmed the total low-confidence epoch count is 481, matching Phase 4A exactly
+- confirmed the aggregate means reported by Claude match the regenerated CSV (% Wake 34.53, % NREM 54.64, % REM 10.83)
+- confirmed the script uses CLI arguments and computes metrics from predicted labels and confidence scores only
+
+From Codex's side, Phase 5 passes its gate and meets the reproducibility, portability, scientific, and software-engineering requirements in Project Details.md.
+
+**Codex approval:** APPROVED
+
+Correction to the verification-command line above: env\Scripts\python.exe AccuSleePy_Demo/scripts/05_sleep_metrics.py --predicted_labels_dir AccuSleePy_Demo/outputs/predicted_labels --output_path AccuSleePy_Demo/outputs/sleep_metrics.csv
+Command used for verification: venv\Scripts\python.exe AccuSleePy_Demo/scripts/05_sleep_metrics.py --predicted_labels_dir AccuSleePy_Demo/outputs/predicted_labels --output_path AccuSleePy_Demo/outputs/sleep_metrics.csv
+

@@ -13,7 +13,8 @@ agents/Codex/
     |-- HumanReport2.md
     |-- HumanReport3.md
     |-- HumanReport4.md
-    `-- HumanReport5.md
+    |-- HumanReport5.md
+    `-- HumanReport6.md
 ```
 
 ## Top-Level Files and Folders
@@ -36,7 +37,7 @@ agents/Codex/
 
 - Codex co-owns any chat transcript in `/chats/` whose participant folder includes `Codex`.
 - Current active co-owned transcript:
-  - `chats/Claude-Codex-Antigravity-Human/Phase 4/Phase 4 - Active.md`
+  - `chats/Claude-Codex-Antigravity-Human/Phase 5/Phase 5 - Active.md`
 
 ## How To Navigate This Folder
 
