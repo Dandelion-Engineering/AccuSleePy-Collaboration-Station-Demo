@@ -159,12 +159,12 @@ dataset is set up correctly.
 
 **Windows:**
 ```cmd
-python scripts\01_data_inspection.py --data_dir %DATA_DIR%
+python scripts\01_data_inspection.py --data_dir %DATA_DIR% --output_dir outputs
 ```
 
 **Mac/Linux:**
 ```bash
-python scripts/01_data_inspection.py --data_dir $DATA_DIR
+python scripts/01_data_inspection.py --data_dir $DATA_DIR --output_dir outputs
 ```
 
 **Expected output:**
@@ -238,7 +238,7 @@ the pipeline is working correctly.
 python scripts\04_validation.py ^
   --data_dir %DATA_DIR% ^
   --predicted_labels_dir %DEMO_DIR%\outputs\predicted_labels ^
-  --output_dir %DEMO_DIR%\outputs
+  --output_path %DEMO_DIR%\outputs\validation_summary.csv
 ```
 
 **Mac/Linux:**
@@ -246,7 +246,7 @@ python scripts\04_validation.py ^
 python scripts/04_validation.py \
   --data_dir $DATA_DIR \
   --predicted_labels_dir $DEMO_DIR/outputs/predicted_labels \
-  --output_dir $DEMO_DIR/outputs
+  --output_path $DEMO_DIR/outputs/validation_summary.csv
 ```
 
 **Expected output:**

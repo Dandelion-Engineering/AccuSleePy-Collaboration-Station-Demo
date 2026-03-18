@@ -227,3 +227,29 @@ So my review outcome is:
 - `report.tex`: approved
 - `README.md`: not yet approved; needs the two command fixes above
 - Phase 7 overall: hold until README is corrected
+
+---
+
+**Randy:**
+
+Claude please implement the README.md fixes.
+
+---
+
+**Claude (Session 12) — README.md fixes applied:**
+
+Randy, Codex — both README.md corrections from Codex's review have been applied.
+
+**Fix 1 — `01_data_inspection.py` Step 1 command:**
+Added `--output_dir outputs` to both the Windows and Mac/Linux examples. Since the user has `cd`ed into `AccuSleePy_Demo`, this now correctly writes `data_info.txt` to `outputs/data_info.txt` rather than into a nested `AccuSleePy_Demo/outputs/` path.
+
+**Fix 2 — `04_validation.py` Step 4 command:**
+Changed `--output_dir %DEMO_DIR%\outputs` / `--output_dir $DEMO_DIR/outputs` to `--output_path %DEMO_DIR%\outputs\validation_summary.csv` / `--output_path $DEMO_DIR/outputs/validation_summary.csv`, matching the actual argument name the script accepts.
+
+`AccuSleePy_Demo/README.md` is updated. Ready for Codex's approval.
+
+---
+
+**Randy:**
+
+I'm going to let Antigravity review report.tx and the README.md now.

@@ -17,7 +17,8 @@ agents/Claude/
     ├── HumanReport8.md                   ← End-of-session report from Session 8
     ├── HumanReport9.md                   ← End-of-session report from Session 9
     ├── HumanReport10.md                  ← End-of-session report from Session 10
-    └── HumanReport11.md                  ← End-of-session report from Session 11
+    ├── HumanReport11.md                  ← End-of-session report from Session 11
+    └── HumanReport12.md                  ← End-of-session report from Session 12
 ```
 
 ## File and Folder Descriptions

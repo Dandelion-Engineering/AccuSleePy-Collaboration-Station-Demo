@@ -1,41 +1,30 @@
-# Summary of Only Necessary Context — Claude Session 11 → Session 12
+# Summary of Only Necessary Context — Claude Session 12 → Session 13
 
-_Rewritten at the end of Session 11 (2026-03-17). Read this at the start of Session 12 before doing any work._
+_Rewritten at the end of Session 12 (2026-03-17). Read this at the start of Session 13 before doing any work._
 
 ---
 
 ## Current Phase
 
-**Phase 7 is in review. All review corrections have been applied. Awaiting Codex and Antigravity approval.**
+**Phase 7 is awaiting final approval.**
 
-- Claude applied all peer review feedback (Sessions 11) to `report.tex` and rewrote `README.md`
-- A completion message has been posted in `chats/Claude-Codex-Antigravity-Human/Phase 7/Phase 7 - Active.md`
-- Codex and Antigravity have not yet done their approval review of the corrected report
+- `report.tex` and `report.pdf` are complete and approved by Codex (Session 9) and Antigravity (Session 7).
+- `README.md` was corrected in Session 12 per Codex's two required README fixes.
+- A completion message confirming the README fixes has been posted in the Phase 7 chat.
+- **Awaiting Codex's final README approval before Phase 7 is declared complete.**
+- Randy will confirm project completion once all reviewers approve.
 
 ---
 
-## What Was Done in Session 11
+## What Was Done in Session 12
 
-### `report.tex` corrections applied (6 total):
+Two corrections applied to `AccuSleePy_Demo/README.md`:
 
-1. **Aggregation mismatch fixed** — Section 3.3.1 and 3.3.2 SDs corrected to animal-level (n=10):
-   - Stage percentages: Wake ±5.16%, NREM ±4.00%, REM ±1.37%
-   - Bout durations: Wake ±10.4 s, NREM ±7.0 s, REM ±11.1 s
-2. **Low-confidence distribution added** — Section 3.2 now includes median 8 epochs (range: 1–28)
-3. **Held-out epoch count made exact** — "5,400 per recording on average" → "5,400 per recording"
-4. **OSF citation added to abstract** — `\citep{BargerOSF2025}` and `\url{https://osf.io/py5eb/}`
-5. **Data Loading rewritten** — Now describes `scripts/utils/data_loading.py` wrapping `accusleepy.fileio.load_recording` / `load_labels`
-6. **QC observed max/min added** — Max Wake 53.5%, max REM 15.3%, min NREM 38.2% added to Section 3.2
+1. **Step 1 (`01_data_inspection.py`) — added `--output_dir outputs`:**
+   - The user is `cd`ed into `AccuSleePy_Demo`, so the script's default `--output_dir AccuSleePy_Demo/outputs` would have written to a nested path. Adding `--output_dir outputs` fixes this.
 
-### `README.md` rewritten:
-- Generic example paths (no local paths)
-- Non-technical audience: explained terminal, virtual environment, activation
-- Convenience variables section (`set` for Windows, `export` for Mac/Linux)
-- All script commands shown for both Windows and Mac/Linux
-- Key Results table updated with animal-level SDs
-
-### PDF recompiled:
-- 12 pages, no LaTeX errors (up from 11 pages in Session 10 due to expanded content)
+2. **Step 4 (`04_validation.py`) — changed `--output_dir` to `--output_path`:**
+   - The script accepts `--output_path` (a full CSV file path), not `--output_dir`. Changed to `--output_path %DEMO_DIR%\outputs\validation_summary.csv` (Windows) / `--output_path $DEMO_DIR/outputs/validation_summary.csv` (Mac/Linux).
 
 ---
 
@@ -76,7 +65,7 @@ _Rewritten at the end of Session 11 (2026-03-17). Read this at the start of Sess
 - `AccuSleePy_Demo/figures/transitions/transition_matrix.png`
 
 **Phase 7 (current):**
-- `AccuSleePy_Demo/README.md` — rewritten for non-technical users, generic paths, Windows+Mac
+- `AccuSleePy_Demo/README.md` — final version with all fixes applied
 - `AccuSleePy_Demo/report/report.tex` — all peer review corrections applied
 - `AccuSleePy_Demo/report/report.pdf` — 12 pages, no errors
 
@@ -86,12 +75,13 @@ _Rewritten at the end of Session 11 (2026-03-17). Read this at the start of Sess
 
 ### `chats/Claude-Codex-Antigravity-Human/Phase 7/Phase 7 - Active.md`
 
-**Status:** Active. Claude has posted corrections-applied message. Awaiting Codex and Antigravity approval review.
+**Status:** Active. Claude has posted the README fix confirmation message. Awaiting Codex's final README approval.
 
-**Next action for Claude:** At the start of Session 12:
+**Next action for Claude:** At the start of Session 13:
 1. Read Phase 7 - Active.md
-2. If Codex and/or Antigravity have posted approval or further feedback, respond accordingly
-3. If all reviewers approve, the project may be complete — await Randy's confirmation
+2. If Codex approves the README, and if Randy has confirmed project completion, conclude the Phase 7 chat and write a Summary.md
+3. If there is further feedback, apply it
+4. If Randy gives no further instructions, the project is complete
 
 ---
 
