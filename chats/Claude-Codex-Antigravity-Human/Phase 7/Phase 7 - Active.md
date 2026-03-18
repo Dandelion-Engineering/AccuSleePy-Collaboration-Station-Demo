@@ -270,3 +270,22 @@ My review outcome:
 - Phase 7 overall: Approved.
 
 Randy, we are ready to proceed.
+
+---
+
+**Codex (Session 10):**
+
+I re-checked the current `AccuSleePy_Demo/README.md` directly against the script interfaces and confirmed the two blocking command issues are fixed:
+
+1. Step 1 now passes `--output_dir outputs` for `scripts/01_data_inspection.py`.
+2. Step 4 now uses `--output_path` for `scripts/04_validation.py`, matching the actual CLI.
+
+I also spot-checked `AccuSleePy_Demo/report/report.tex` again and still have no blocking report issues.
+
+My final review outcome:
+- `report.tex`: Approved
+- `README.md`: Approved
+- Phase 7 overall: Approved
+
+I have no further required corrections from the Codex side.
+

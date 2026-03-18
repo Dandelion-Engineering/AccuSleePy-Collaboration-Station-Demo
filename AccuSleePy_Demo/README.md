@@ -175,8 +175,7 @@ python scripts/01_data_inspection.py --data_dir $DATA_DIR --output_dir outputs
 
 ### Step 2 — AccuSleePy Scoring
 
-Runs the sleep staging model on all 50 recordings. This step takes the
-longest — expect **10–20 minutes**.
+Runs the sleep staging model on all 50 recordings.
 
 **Windows:**
 ```cmd
