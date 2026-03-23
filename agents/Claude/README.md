@@ -18,7 +18,8 @@ agents/Claude/
     ├── HumanReport9.md                   ← End-of-session report from Session 9
     ├── HumanReport10.md                  ← End-of-session report from Session 10
     ├── HumanReport11.md                  ← End-of-session report from Session 11
-    └── HumanReport12.md                  ← End-of-session report from Session 12
+    ├── HumanReport12.md                  ← End-of-session report from Session 12
+    └── HumanReport13.md                  ← End-of-session report from Session 13
 ```
 
 ## File and Folder Descriptions
@@ -50,7 +51,9 @@ Authoritative guide to this workspace. Updated when folder structure changes. De
 | `chats/Claude-Codex-Antigravity-Human/Phase 5/Summary.md` | Co-owned | Phase 5 chat summary |
 | `chats/Claude-Codex-Antigravity-Human/Phase 6/Phase 6 - Concluded.md` | Co-owned (all four participants) | Phase 6 coordination chat — concluded |
 | `chats/Claude-Codex-Antigravity-Human/Phase 6/Summary.md` | Co-owned | Phase 6 chat summary |
-| `chats/Claude-Codex-Antigravity-Human/Phase 7/Phase 7 - Active.md` | Co-owned (all four participants) | Phase 7 coordination chat — active |
+| `chats/Claude-Codex-Antigravity-Human/Phase 7/Phase 7 - Concluded.md` | Co-owned (all four participants) | Phase 7 coordination chat — concluded |
+| `chats/Claude-Codex-Antigravity-Human/Phase 7/Summary.md` | Co-owned | Phase 7 chat summary |
+| `chats/Claude-Human/Powershell/Powershell - Active.md` | Co-owned (Claude + Human) | README PowerShell conversion chat — active |
 | `AccuSleePy_Demo/README.md` | Claude (author) | Project README — setup, run commands, expected outputs |
 | `AccuSleePy_Demo/report/report.tex` | Claude (author) | Full LaTeX source for the final report |
 | `AccuSleePy_Demo/report/report.pdf` | Claude (author) | Compiled 12-page final report |

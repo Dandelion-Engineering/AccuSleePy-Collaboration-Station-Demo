@@ -50,7 +50,7 @@ This project requires **Python 3.11**. If you do not have Python installed,
 download it from <https://www.python.org/downloads/>.
 
 All commands below are run in a **terminal**:
-- **Windows:** Press `Win + R`, type `cmd`, and press Enter.
+- **Windows:** Press `Win + X` and select **Windows PowerShell** (or **Terminal** in Windows 11).
 - **Mac:** Open the **Terminal** app (find it in Applications → Utilities).
 
 ### Step 1 — Open a terminal and navigate to this folder
@@ -59,7 +59,7 @@ Replace the path below with the actual location of the `AccuSleePy_Demo`
 folder on your computer.
 
 **Windows:**
-```cmd
+```powershell
 cd C:\path\to\AccuSleePy_Demo
 ```
 
@@ -74,7 +74,7 @@ A virtual environment keeps all the packages for this project separate from
 the rest of your system. Run this once:
 
 **Windows:**
-```cmd
+```powershell
 python -m venv venv
 ```
 
@@ -89,9 +89,15 @@ You need to activate the environment **every time** you open a new terminal
 to work on this project.
 
 **Windows:**
-```cmd
-venv\Scripts\activate
+```powershell
+venv\Scripts\Activate.ps1
 ```
+
+> **Note for Windows users:** If you see an error about running scripts being
+> disabled, run this command once to allow activation scripts, then try again:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
 
 **Mac/Linux:**
 ```bash
@@ -123,11 +129,11 @@ your paths as short-hand variables and reuse them throughout the session.
 
 Replace the example paths below with your actual paths.
 
-**Windows (Command Prompt):**
-```cmd
-set DATA_DIR=C:\path\to\your\AccuSleePy_dataset
-set MODEL_PATH=C:\path\to\ssann_2(5)s.pth
-set DEMO_DIR=C:\path\to\AccuSleePy_Demo
+**Windows (PowerShell):**
+```powershell
+$env:DATA_DIR = "C:\path\to\your\AccuSleePy_dataset"
+$env:MODEL_PATH = "C:\path\to\ssann_2(5)s.pth"
+$env:DEMO_DIR = "C:\path\to\AccuSleePy_Demo"
 ```
 
 **Mac/Linux (Terminal):**
@@ -137,7 +143,7 @@ export MODEL_PATH=/path/to/ssann_2(5)s.pth
 export DEMO_DIR=/path/to/AccuSleePy_Demo
 ```
 
-Once set, every script command in this guide that uses `%DATA_DIR%` (Windows)
+Once set, every script command in this guide that uses `$env:DATA_DIR` (Windows)
 or `$DATA_DIR` (Mac/Linux) will automatically use your actual path.
 
 ---
@@ -158,8 +164,8 @@ Loads and summarises all 50 recordings. Run this first to confirm your
 dataset is set up correctly.
 
 **Windows:**
-```cmd
-python scripts\01_data_inspection.py --data_dir %DATA_DIR% --output_dir outputs
+```powershell
+python scripts\01_data_inspection.py --data_dir $env:DATA_DIR --output_dir outputs
 ```
 
 **Mac/Linux:**
@@ -178,11 +184,11 @@ python scripts/01_data_inspection.py --data_dir $DATA_DIR --output_dir outputs
 Runs the sleep staging model on all 50 recordings.
 
 **Windows:**
-```cmd
-python scripts\02_accusleepy_scoring.py ^
-  --data_dir %DATA_DIR% ^
-  --model_path %MODEL_PATH% ^
-  --output_dir %DEMO_DIR%\outputs\predicted_labels
+```powershell
+python scripts\02_accusleepy_scoring.py `
+  --data_dir $env:DATA_DIR `
+  --model_path $env:MODEL_PATH `
+  --output_dir $env:DEMO_DIR\outputs\predicted_labels
 ```
 
 **Mac/Linux:**
@@ -207,10 +213,10 @@ Checks each recording for unusual stage proportions or long unbroken runs,
 and lists any low-confidence epochs.
 
 **Windows:**
-```cmd
-python scripts\03_quality_control.py ^
-  --predicted_labels_dir %DEMO_DIR%\outputs\predicted_labels ^
-  --output_dir %DEMO_DIR%
+```powershell
+python scripts\03_quality_control.py `
+  --predicted_labels_dir $env:DEMO_DIR\outputs\predicted_labels `
+  --output_dir $env:DEMO_DIR
 ```
 
 **Mac/Linux:**
@@ -233,11 +239,11 @@ Compares AccuSleePy's predictions to the expert manual labels to confirm
 the pipeline is working correctly.
 
 **Windows:**
-```cmd
-python scripts\04_validation.py ^
-  --data_dir %DATA_DIR% ^
-  --predicted_labels_dir %DEMO_DIR%\outputs\predicted_labels ^
-  --output_path %DEMO_DIR%\outputs\validation_summary.csv
+```powershell
+python scripts\04_validation.py `
+  --data_dir $env:DATA_DIR `
+  --predicted_labels_dir $env:DEMO_DIR\outputs\predicted_labels `
+  --output_path $env:DEMO_DIR\outputs\validation_summary.csv
 ```
 
 **Mac/Linux:**
@@ -261,10 +267,10 @@ Computes stage proportions, bout statistics, and state transition
 probabilities for all recordings.
 
 **Windows:**
-```cmd
-python scripts\05_sleep_metrics.py ^
-  --predicted_labels_dir %DEMO_DIR%\outputs\predicted_labels ^
-  --output_path %DEMO_DIR%\outputs\sleep_metrics.csv
+```powershell
+python scripts\05_sleep_metrics.py `
+  --predicted_labels_dir $env:DEMO_DIR\outputs\predicted_labels `
+  --output_path $env:DEMO_DIR\outputs\sleep_metrics.csv
 ```
 
 **Mac/Linux:**
@@ -285,12 +291,12 @@ python scripts/05_sleep_metrics.py \
 Produces all publication-quality figures from the outputs of Steps 4 and 5.
 
 **Windows:**
-```cmd
-python scripts\06_figures.py ^
-  --sleep_metrics_csv %DEMO_DIR%\outputs\sleep_metrics.csv ^
-  --validation_csv %DEMO_DIR%\outputs\validation_summary.csv ^
-  --predicted_labels_dir %DEMO_DIR%\outputs\predicted_labels ^
-  --output_dir %DEMO_DIR%\figures
+```powershell
+python scripts\06_figures.py `
+  --sleep_metrics_csv $env:DEMO_DIR\outputs\sleep_metrics.csv `
+  --validation_csv $env:DEMO_DIR\outputs\validation_summary.csv `
+  --predicted_labels_dir $env:DEMO_DIR\outputs\predicted_labels `
+  --output_dir $env:DEMO_DIR\figures
 ```
 
 **Mac/Linux:**

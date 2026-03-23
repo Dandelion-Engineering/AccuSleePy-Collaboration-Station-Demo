@@ -1,49 +1,34 @@
-# Summary of Only Necessary Context — Claude Session 12 → Session 13
+# Summary of Only Necessary Context — Claude Session 13 → Session 14
 
-_Rewritten at the end of Session 12 (2026-03-17). Read this at the start of Session 13 before doing any work._
+_Rewritten at the end of Session 13 (2026-03-23). Read this at the start of Session 14 before doing any work._
 
 ---
 
 ## Current Phase
 
-**Phase 7 is awaiting final approval.**
-
-- `report.tex` and `report.pdf` are complete and approved by Codex (Session 9) and Antigravity (Session 7).
-- `README.md` was corrected in Session 12 per Codex's two required README fixes.
-- A completion message confirming the README fixes has been posted in the Phase 7 chat.
-- **Awaiting Codex's final README approval before Phase 7 is declared complete.**
-- Randy will confirm project completion once all reviewers approve.
+**The project deliverable is complete.** All phases (1–7) are done and fully approved by Codex, Antigravity, and Randy.
 
 ---
 
-## What Was Done in Session 12
+## What Was Done in Session 13
 
-Two corrections applied to `AccuSleePy_Demo/README.md`:
+1. **Concluded the Phase 7 chat** — renamed `Phase 7 - Active.md` to `Phase 7 - Concluded.md` and created `Summary.md` in `chats/Claude-Codex-Antigravity-Human/Phase 7/`.
 
-1. **Step 1 (`01_data_inspection.py`) — added `--output_dir outputs`:**
-   - The user is `cd`ed into `AccuSleePy_Demo`, so the script's default `--output_dir AccuSleePy_Demo/outputs` would have written to a nested path. Adding `--output_dir outputs` fixes this.
+2. **Updated `AccuSleePy_Demo/README.md` to use PowerShell** per Randy's request in the new Powershell chat:
+   - Terminal opening instruction changed to PowerShell (`Win+X`)
+   - All `cmd` code blocks changed to `powershell`
+   - Activation command changed to `venv\Scripts\Activate.ps1` with an execution policy note
+   - Convenience variables changed from `set VAR=value` to `$env:VAR = "value"`
+   - Variable references changed from `%VAR%` to `$env:VAR`
+   - Line continuation changed from `^` to `` ` `` (backtick)
 
-2. **Step 4 (`04_validation.py`) — changed `--output_dir` to `--output_path`:**
-   - The script accepts `--output_path` (a full CSV file path), not `--output_dir`. Changed to `--output_path %DEMO_DIR%\outputs\validation_summary.csv` (Windows) / `--output_path $DEMO_DIR/outputs/validation_summary.csv` (Mac/Linux).
+3. **Replied to the Powershell chat** confirming all changes made.
 
 ---
 
 ## Current State of Work
 
-### Dataset Facts (confirmed in Session 2)
-
-| Property | Value |
-|---|---|
-| Data root | `C:\Datasets\AccuSleePy_Data\4-hour_recordings\MouseXX\DayX\` |
-| Signal file | `recording.parquet` — 2 columns: `eeg`, `emg`, float64 |
-| Label file | `labels.csv` — 1 column: `brain_state`, int64 |
-| Sampling rate | 512 Hz |
-| Epoch length | 2.5 s → 1,280 samples/epoch |
-| Epochs/recording | 5,760 |
-| Label encoding | REM=1, Wake=2, NREM=3 |
-| Anomalies | None |
-
-### All Phase Outputs (complete)
+### All Phase Outputs (complete and approved)
 
 **Phase 3:**
 - `AccuSleePy_Demo/outputs/predicted_labels/` — 50 predicted-label CSVs + 50 calibration-index CSVs
@@ -64,8 +49,8 @@ Two corrections applied to `AccuSleePy_Demo/README.md`:
 - `AccuSleePy_Demo/figures/validation/kappa_distribution.png`
 - `AccuSleePy_Demo/figures/transitions/transition_matrix.png`
 
-**Phase 7 (current):**
-- `AccuSleePy_Demo/README.md` — final version with all fixes applied
+**Phase 7 (complete):**
+- `AccuSleePy_Demo/README.md` — final version with all fixes applied (now PowerShell)
 - `AccuSleePy_Demo/report/report.tex` — all peer review corrections applied
 - `AccuSleePy_Demo/report/report.pdf` — 12 pages, no errors
 
@@ -73,13 +58,13 @@ Two corrections applied to `AccuSleePy_Demo/README.md`:
 
 ## Active Chats
 
-### `chats/Claude-Codex-Antigravity-Human/Phase 7/Phase 7 - Active.md`
+### `chats/Claude-Human/Powershell/Powershell - Active.md`
 
-**Status:** Active. Claude has posted the README fix confirmation message. Awaiting Codex's final README approval.
+**Status:** Active. Claude has posted the PowerShell conversion confirmation message. Awaiting Randy's response.
 
-**Next action for Claude:** At the start of Session 13:
-1. Read Phase 7 - Active.md
-2. If Codex approves the README, and if Randy has confirmed project completion, conclude the Phase 7 chat and write a Summary.md
+**Next action for Claude:** At the start of Session 14:
+1. Read the Powershell chat
+2. If Randy confirms the changes are satisfactory, conclude the chat and write a Summary.md
 3. If there is further feedback, apply it
 4. If Randy gives no further instructions, the project is complete
 
@@ -105,10 +90,6 @@ Two corrections applied to `AccuSleePy_Demo/README.md`:
 | Mean REM bout | 76.4 ± 11.1 s (animal-level) |
 | Total low-confidence epochs | 481 (mean 0.167%); median 8/recording, range 1–28 |
 | Recordings flagged in QC | 0 / 50 |
-| Max Wake observed | 53.5% |
-| Max REM observed | 15.3% |
-| Min NREM observed | 38.2% |
-| Expert label distribution | REM 10.46%, Wake 34.37%, NREM 55.17% |
 
 ---
 
@@ -119,6 +100,5 @@ Two corrections applied to `AccuSleePy_Demo/README.md`:
 - **Data path:** `C:\Datasets\AccuSleePy_Data` — pass via `--data_dir`.
 - **Model path:** `C:\Datasets\models\ssann_2(5)s.pth` — pass via `--model_path`.
 - **Label encoding:** REM=1, Wake=2, NREM=3 — confirmed.
-- **Phase gates are strict:** Do not begin any new work until Randy has given explicit instructions.
 - **File encoding:** Use `encoding="utf-8"` when writing markdown files on Windows.
 - **SDs in report.tex:** Animal-level (n=10) SDs are used in Section 3.3 where text says "across 10 animals". Abstract uses recording-level (n=50) SDs — this is intentional and consistent.
