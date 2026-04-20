@@ -385,13 +385,8 @@ AccuSleePy_Demo/
 
 ---
 
-## Citation
+## References
 
-If you use this analysis or the dataset, please cite:
+Barger, Z., Frye, C. G., Liu, D., Dan, Y., & Bouchard, K. E. (2019). Robust, automated sleep scoring by a compact neural network with distributional shift correction. PLOS ONE, 14(12), 1–18. [https://doi.org/10.1371/journal.pone.0224642]
 
-> Barger, Z., Frye, C. G., Liu, D., Dan, Y., & Bouchard, K. E. (2019).
-> Robust, automated sleep scoring by a compact neural network with distributional
-> shift correction. *PLOS ONE*, 14(12), 1–18.
-> <https://doi.org/10.1371/journal.pone.0224642>
-
-> Barger, Z., & Frye, C. (2025, June 6). AccuSleep. <https://doi.org/10.17605/OSF.IO/PY5EB>
+Barger, Z., & Frye, C. (2025, June 6). AccuSleep. https://doi.org/10.17605/OSF.IO/PY5EB
